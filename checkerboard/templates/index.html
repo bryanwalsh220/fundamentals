@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckerBoard</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+    
+    <style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-right: 25%;
+        margin-left: 25%;
+    }
+    
+    .box1 {
+        height: 200px;
+        width: 200px;
+        background-color: {{color1}};
+    }
+    
+    .box2 {
+        height: 200px;
+        width: 200px;
+        background-color: {{color2}};
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+
+        {% for r in range(row) %}
+        <div class="row">
+        {% for c in range(column) %}
+                {% if (r + c) % 2 == 0  %}
+                <div class="box1"></div>
+                {% else %}
+                <div class="box2"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+    </div>
+    
+</body>
+</html>
