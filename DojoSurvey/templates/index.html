@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/bootstrap.css') }}">">
+</head>
+<body>
+    
+    
+    <div class="row">
+
+        <div class="mx-auto col-10 col-md-8 col-lg-6 bg-dark text-white text-center">
+
+            <h1>Welcome to Dojo Survey where we take your information and store it for next time</h1>
+            
+            <h3 class="description">Please enter your survey information below</h3>
+
+            <form action="/process" method="post" class="justify-content-center col-md-6">
+                <div class="row mb-3">
+                    <label for="name" class="col-sm-2 col-form-label">Your Name:</label>
+                    <input type="text" class="form-control" name="name">
+                </div> 
+                <br><br>
+                <div class="row mb-3">
+                    <label for="dojoLocation" class="col-sm-2 col-form-label">Where's your Dojo:</label>
+                    <input type=" text" name="dojoLocation" class="form-control">
+                </div>
+                <br><br>
+                <div class="row mb-3">
+                <label for="favLang" class="col-sm-2 col-form-label">What's your favorite coding language</label>
+                <br>
+                    <select name="languages" id="lang" class="form-select">
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="HTML/CSS">HTML/CSS</option>
+                        <option value="Python">Python</option>
+                        <option value="c#">c#</option>
+                    </select>
+                </div>
+                <!-- <label for="comments">Additional Comments</label>
+                <input type="text" name="comments"> -->
+                <button type="submit" method="formmethod" class="btn btn-primary mb-4">Submit your info!</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

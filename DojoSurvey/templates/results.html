@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/bootstrap.css') }}">">
+</head>
+<body>
+    <!-- <h1>Here's what you told us</h1>
+
+    <h3>{{session['name']}}</h3>
+    <h3>{{session['location']}}</h3>
+    <h3>{{session['languages']}}</h3> -->
+    <!-- <h3>{{session['comments']}}</h3> -->
+
+
+    <div class="card text-center text-white bg-dark" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Here's what you told us...</h5>
+          <h6 class="card-subtitle mb-2 text-muted">About you:</h6>
+          <p class="card-text">Your Name: {{session['name']}}</p>
+          <p class="card-text">Your Dojo Location: {{session['location']}}</p>
+          <p class="card-text">Your Favorite Language: {{session['languages']}}</p>
+        </div>
+      </div>
+
+</body>
+</html>
